@@ -10,14 +10,14 @@ class FirstApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My Shop Ghana',
+      title: 'Portfolio',
       home: Scaffold(
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
           appBar: AppBar(
             backgroundColor: Color.fromARGB(255, 28, 51, 114),
             title: Align(
-              alignment: Alignment.centerLeft,
-              child: Text("MyShopGh"),
+              alignment: Alignment.center,
+              child: Text("PORTFOLIO"),
             ),
           ),
           body: Column(
@@ -35,7 +35,7 @@ class FirstApp extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      "S",
+                      "W",
                       style: TextStyle(
                         fontSize: 80,
                         color: Color.fromARGB(255, 28, 51, 114),
@@ -46,13 +46,53 @@ class FirstApp extends StatelessWidget {
               ),
               Container(
                 margin: EdgeInsets.all(30),
+                alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 28, 51, 114),
-                  borderRadius: BorderRadius.circular(20),
+                  color: Color.fromARGB(255, 166, 178, 219),
+                  borderRadius: BorderRadius.circular(50),
                 ),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
+                child: Padding(
+                  padding: const EdgeInsets.all(5),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Name",
+                        icon: Icon(Icons.person),
+                        iconColor: Color.fromARGB(255, 32, 55, 92)),
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 30, right: 30),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 166, 178, 219),
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(5),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Password",
+                        icon: Icon(Icons.lock),
+                        iconColor: Color.fromARGB(255, 32, 55, 92)),
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 30, top: 25, right: 30),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 166, 178, 219),
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(5),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Github",
+                        icon: Icon(Icons.link),
+                        iconColor: Color.fromARGB(255, 32, 55, 92)),
                   ),
                 ),
               ),
