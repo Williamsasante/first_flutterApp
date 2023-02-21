@@ -12,66 +12,52 @@ class FirstApp extends StatelessWidget {
     return MaterialApp(
       title: 'My Shop Ghana',
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
-        appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 28, 51, 114),
-          title: Align(
-            alignment: Alignment.centerLeft,
-            child: Text("MyShopGh"),
+          backgroundColor: Color.fromARGB(255, 255, 255, 255),
+          appBar: AppBar(
+            backgroundColor: Color.fromARGB(255, 28, 51, 114),
+            title: Align(
+              alignment: Alignment.centerLeft,
+              child: Text("MyShopGh"),
+            ),
           ),
-        ),
-        body: Column(
-          children: [
-            Text("LOGIN PAGE",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 28, 51, 114),
-                  fontSize: 30,
-                  fontStyle: FontStyle.normal,
-                  fontWeight: FontWeight.bold,
-                )),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: RichText(
-                text: TextSpan(
-                    text: "Welcome to",
-                    style: TextStyle(
-                      color: Colors.amber,
-                      fontSize: 15,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.bold,
+          body: Column(
+            children: [
+              Center(
+                child: Container(
+                  margin: EdgeInsets.only(top: 40),
+                  height: 200,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: Colors.white,
+                    border: Border.all(
+                        color: Color.fromARGB(255, 28, 51, 114), width: 2),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "S",
+                      style: TextStyle(
+                        fontSize: 80,
+                        color: Color.fromARGB(255, 28, 51, 114),
+                      ),
                     ),
-                    children: <TextSpan>[TextSpan(text: "Onshop Ghana")]),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "Name",
-                  hintText: "Enter your name",
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "Password",
-                  hintText: "Enter your Password",
+              Container(
+                margin: EdgeInsets.all(30),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 28, 51, 114),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                  ),
                 ),
               ),
-            ),
-            Text("Forgotten Password?Click Here...",
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Color.fromARGB(255, 23, 46, 122),
-                )),
-          ],
-        ),
-      ),
+            ],
+          )),
     );
   }
 }
